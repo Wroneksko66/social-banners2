@@ -43,6 +43,7 @@ export class AppComponent {
   }
 
   setLayout(selectedLayout: string) {
+    console.log("he")
     Object.keys(this.layout).forEach(key => (this.layout[key] = false));
     this.layout[selectedLayout] = true;
   }
@@ -50,4 +51,5 @@ export class AppComponent {
   saveImage(element: HTMLDivElement) {
     domtoimage.toBlob(element).then(blob => saveAs(blob));
   }
+
 }
